@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chirchir Emmanuel Kiprono | Graduate Civil Engineer</title>
+<meta name="description" content="Chirchir Emmanuel Kiprono, Graduate Civil Engineer in Nairobi, Kenya. Structural design, construction supervision, site safety, quality control and stormwater drainage assessment." />
+<meta name="theme-color" content="#D6E6FF" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2338BDF8'/%3E%3Ctext x='32' y='43' font-size='28' font-weight='800' text-anchor='middle' fill='%230A1F44' font-family='sans-serif'%3ECK%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+<style>
+  /* Palette: a family of blues, from deep navy to pale sky */
+  :root{
+    --ink:#0A1F44;
+    --sky:#38BDF8;
+    --royal:#1D4ED8;
+    --azure:#60A5FA;
+    --powder:#93C5FD;
+    --mist:#EEF4FF;
+    --ice:#D6E6FF;
+    --white:#FFFFFF;
+    --earth:#4B6EA3;
+    --display:'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --text:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --maxw:1180px;
+    --bw:3px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:72px;}
+  body{
+    background:var(--white);
+    color:var(--ink);
+    font-family:var(--text);
+    font-size:18px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  h1,h2,h3,h4{font-family:var(--display); color:var(--ink);}
+
+  :focus-visible{outline:3px solid var(--royal); outline-offset:3px;}
+  .nav :focus-visible, .band--ink :focus-visible{outline-color:var(--sky);}
+  .band--royal :focus-visible{outline-color:var(--white);}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  .skip{
+    position:absolute; left:-999px; top:8px;
+    background:var(--white); color:var(--ink);
+    padding:10px 16px; border-radius:10px; z-index:200;
+    font-family:var(--display); font-weight:700;
+  }
+  .skip:focus{left:8px;}
+
+  /* ===== BUTTONS ===== */
+  .btn{
+    --shadow:var(--ink);
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:13px 26px;
+    border:var(--bw) solid var(--ink);
+    border-radius:999px;
+    font-family:var(--display); font-weight:700; font-size:16px; line-height:1.2;
+    cursor:pointer;
+    background:var(--white); color:var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translate(-2px,-2px); box-shadow:4px 4px 0 var(--shadow);}
+  .btn:active{transform:translate(0,0); box-shadow:none;}
+  .btn--royal{background:var(--royal); color:var(--white);}
+  .btn--sky{background:var(--sky); border-color:var(--sky); --shadow:var(--azure);}
+
+  /* ===== NAV ===== */
+  .nav{
+    position:sticky; top:0; z-index:100;
+    background:var(--ink); color:var(--white);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto;
+    padding:12px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .brand{display:flex; align-items:center; gap:12px; font-family:var(--display); font-weight:700; font-size:17px;}
+  .brand-mark{
+    width:40px; height:40px; border-radius:11px;
+    background:var(--sky); color:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:16px;
+  }
+  .links{display:flex; align-items:center; gap:30px; font-family:var(--display); font-weight:500; font-size:16px;}
+  .links a:not(.btn){padding:6px 0; border-bottom:3px solid transparent; transition:border-color .15s ease;}
+  .links a:not(.btn):hover{border-color:var(--sky);}
+  .links .btn{padding:9px 20px; font-size:15px; background:var(--sky); border-color:var(--sky); --shadow:var(--azure);}
+  .menu-btn{
+    display:none;
+    background:none; color:var(--white);
+    border:2px solid var(--white); border-radius:10px;
+    padding:8px 14px;
+    font-family:var(--display); font-weight:700; font-size:15px;
+    cursor:pointer;
+  }
+
+  @media (max-width: 900px){
+    .menu-btn{display:block;}
+    .links{
+      display:none;
+      position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; align-items:flex-start; gap:0;
+      background:var(--ink);
+      padding:8px 28px 28px;
+      border-top:1px solid rgba(255,255,255,.18);
+    }
+    .links.open{display:flex;}
+    .links a:not(.btn){width:100%; padding:14px 0; font-size:20px; border-bottom:1px solid rgba(255,255,255,.14);}
+    .links .btn{margin-top:18px;}
+  }
+
+  /* ===== BANDS (each section is a colour block) ===== */
+  .band{padding:clamp(72px, 9vw, 120px) 0;}
+  .band--mist{background:var(--mist);}
+  .band--royal{background:var(--royal); color:var(--white);}
+  .band--white{background:var(--white);}
+  .band--powder{background:var(--powder);}
+  .band--ink{background:var(--ink); color:var(--white);}
+
+  .h2{
+    font-weight:800;
+    font-size:clamp(2.5rem, 6.2vw, 4.6rem);
+    font-stretch:85%;
+    line-height:.98;
+    letter-spacing:-0.03em;
+    margin-bottom:clamp(36px, 5vw, 56px);
+  }
+  .band--royal .h2, .band--ink .h2{color:var(--white);}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:var(--ice);
+    padding-top:clamp(40px, 6vw, 80px);
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:clamp(32px, 5vw, 72px);
+    align-items:center;
+  }
+  .hero h1{
+    font-weight:800;
+    font-stretch:80%;
+    font-size:clamp(3.4rem, 11.5vw, 8.6rem);
+    line-height:.9;
+    letter-spacing:-0.045em;
+    margin-bottom:28px;
+  }
+  .hero h1 span{display:block;}
+  .role{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(1.25rem, 2.4vw, 1.7rem);
+    margin-bottom:14px;
+  }
+  .hero .desc{max-width:34em; font-size:19px; margin-bottom:30px;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:36px;}
+
+  .stickers{display:flex; flex-wrap:wrap; gap:12px;}
+  .sticker{
+    display:inline-block;
+    padding:8px 16px;
+    border:2.5px solid var(--ink);
+    border-radius:999px;
+    font-family:var(--display); font-weight:700; font-size:15px; line-height:1.3;
+    background:var(--white);
+  }
+  .sticker:nth-child(1){transform:rotate(-2deg);}
+  .sticker:nth-child(2){transform:rotate(1.5deg); background:var(--azure);}
+  .sticker:nth-child(3){transform:rotate(-1deg); background:var(--royal); color:var(--white);}
+  .sticker:nth-child(4){transform:rotate(2deg); background:var(--powder);}
+
+  .portrait-wrap{position:relative; max-width:400px; width:100%; justify-self:center;}
+  .portrait{
+    position:relative;
+    aspect-ratio:4/5;
+    background:var(--royal);
+    border:var(--bw) solid var(--ink);
+    border-radius:999px 999px 30px 30px;
+    box-shadow:12px 12px 0 var(--ink);
+    overflow:hidden;
+  }
+  .portrait .initials{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:800; font-stretch:80%;
+    font-size:clamp(5rem, 14vw, 9rem);
+    letter-spacing:-0.04em;
+    color:var(--sky);
+  }
+  /* Add a file named portrait.jpg next to index.html and it replaces the initials automatically */
+  .portrait img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .avail{
+    position:absolute; left:-18px; bottom:28px;
+    transform:rotate(-4deg);
+    background:var(--white);
+    border:var(--bw) solid var(--ink);
+    border-radius:16px;
+    padding:10px 18px;
+    font-family:var(--display); font-weight:700; font-size:15px;
+    display:flex; align-items:center; gap:10px;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .avail::before{
+    content:''; width:12px; height:12px; border-radius:50%;
+    background:var(--powder); border:2px solid var(--ink);
+  }
+
+  /* The one page-load moment: hero copy rises in */
+  @keyframes rise{from{opacity:0; transform:translateY(26px);} to{opacity:1; transform:none;}}
+  .hero-copy > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
+  .hero-copy > :nth-child(1){animation-delay:.05s;}
+  .hero-copy > :nth-child(2){animation-delay:.15s;}
+  .hero-copy > :nth-child(3){animation-delay:.25s;}
+  .hero-copy > :nth-child(4){animation-delay:.35s;}
+  .hero-copy > :nth-child(5){animation-delay:.45s;}
+
+  /* Caution tape of skills */
+  .tape{
+    position:relative;
+    margin:clamp(56px, 8vw, 96px) -5% 0;
+    padding:20px 0;
+    background:var(--ink);
+    color:var(--sky);
+    transform:rotate(-1.6deg);
+    overflow:hidden;
+  }
+  .tape::before, .tape::after{
+    content:''; position:absolute; left:0; right:0; height:9px;
+    background:repeating-linear-gradient(135deg, var(--sky) 0 14px, var(--ink) 14px 28px);
+  }
+  .tape::before{top:0;}
+  .tape::after{bottom:0;}
+  .track{display:flex; width:max-content; animation:slide 45s linear infinite;}
+  .track ul{display:flex; align-items:center;}
+  .track li{
+    display:flex; align-items:center;
+    font-family:var(--display); font-weight:700; font-size:clamp(1.1rem, 2.2vw, 1.5rem);
+    white-space:nowrap;
+  }
+  .track li::after{
+    content:''; width:12px; height:12px; margin:0 28px;
+    background:var(--azure); transform:rotate(45deg);
+  }
+  @keyframes slide{to{transform:translateX(-50%);}}
+
+  @media (max-width: 860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .portrait-wrap{max-width:300px; order:-1; margin-bottom:12px;}
+    .avail{left:-8px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .hero-copy > *{animation:none;}
+    .track{animation:none;}
+    .btn, .tile{transition:none;}
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.45fr 1fr;
+    gap:clamp(32px, 5vw, 72px);
+    align-items:start;
+  }
+  .about-grid p{max-width:36em; margin-bottom:20px;}
+  .about-grid strong{
+    font-weight:700;
+    background:linear-gradient(transparent 58%, var(--sky) 58%);
+  }
+  .card-contact{
+    background:var(--azure);
+    border:var(--bw) solid var(--ink);
+    border-radius:24px;
+    box-shadow:8px 8px 0 var(--ink);
+    padding:12px 26px;
+  }
+  .card-contact .row{
+    padding:16px 0;
+    border-bottom:2px solid rgba(10,31,68,.25);
+    font-family:var(--display); font-size:17px; line-height:1.4;
+    word-break:break-word;
+  }
+  .card-contact .row:last-child{border-bottom:none;}
+  .card-contact .k{display:block; font-weight:500; font-size:14px; margin-bottom:2px;}
+  .card-contact .v{font-weight:700;}
+  .card-contact a.v{text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px;}
+  .card-contact a.v:hover{text-decoration-color:var(--white);}
+
+  @media (max-width: 860px){ .about-grid{grid-template-columns:1fr;} }
+
+  /* ===== SKILLS ===== */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:28px;
+  }
+  .skill{
+    border:var(--bw) solid var(--ink);
+    border-radius:26px;
+    box-shadow:8px 8px 0 var(--ink);
+    padding:32px 30px 34px;
+    color:var(--ink);
+  }
+  .skill--sky{background:var(--sky);}
+  .skill--azure{background:var(--azure);}
+  .skill--powder{background:var(--powder);}
+  .skill--white{background:var(--white);}
+  /* Survey point symbols: one per skill group */
+  .sym{display:block; width:34px; height:34px; background:var(--ink); margin-bottom:20px;}
+  .sym--circle{border-radius:50%;}
+  .sym--square{border-radius:4px;}
+  .sym--triangle{clip-path:polygon(50% 0, 100% 100%, 0 100%);}
+  .sym--diamond{clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
+  .skill h3{font-weight:800; font-size:1.65rem; line-height:1.1; letter-spacing:-0.02em; margin-bottom:12px;}
+  .skill p{font-size:17px; margin-bottom:20px;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    font-family:var(--display); font-weight:600; font-size:14px; line-height:1.3;
+    padding:6px 14px;
+    border:2px solid var(--ink);
+    border-radius:999px;
+    background:rgba(255,255,255,.55);
+  }
+  .skill--white .chip{background:transparent;}
+
+  @media (max-width: 760px){ .skills-grid{grid-template-columns:1fr;} }
+
+  /* ===== EXPERIENCE ===== */
+  .timeline{position:relative; padding-left:64px; display:grid; gap:44px;}
+  /* Road centre line as the timeline rail */
+  .timeline::before{
+    content:''; position:absolute; left:0; top:0; bottom:0; width:18px;
+    background:var(--ink); border-radius:9px;
+  }
+  .timeline::after{
+    content:''; position:absolute; left:7.5px; top:12px; bottom:12px; width:3px;
+    background:repeating-linear-gradient(to bottom, var(--sky) 0 14px, transparent 14px 26px);
+  }
+  .job{
+    position:relative;
+    background:var(--white);
+    border:var(--bw) solid var(--ink);
+    border-radius:26px;
+    padding:30px 32px 34px;
+    box-shadow:8px 8px 0 var(--royal);
+  }
+  .job:nth-child(2){box-shadow:8px 8px 0 var(--azure);}
+  .job:nth-child(3){box-shadow:8px 8px 0 var(--sky);}
+  .job::before{
+    content:''; position:absolute; left:-64px; top:34px;
+    width:46px; height:var(--bw); background:var(--ink);
+  }
+  .job .meta{
+    display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px;
+    font-family:var(--display); font-weight:500; font-size:15px;
+    margin-bottom:12px;
+  }
+  .tag{
+    font-weight:700; font-size:14px;
+    padding:3px 12px;
+    background:var(--sky);
+    border:2px solid var(--ink);
+    border-radius:999px;
+  }
+  .tag--now{display:inline-flex; align-items:center; gap:8px; background:var(--royal); color:var(--white); border-color:var(--royal);}
+  .tag--now::before{content:''; width:9px; height:9px; border-radius:50%; background:var(--sky);}
+  .job h3{font-weight:800; font-size:1.7rem; line-height:1.1; letter-spacing:-0.02em; margin-bottom:4px;}
+  .job .org{font-family:var(--display); font-weight:600; font-size:17px; color:var(--royal); margin-bottom:18px;}
+  .bullets{display:grid; gap:10px;}
+  .bullets li{position:relative; padding-left:26px; font-size:17px;}
+  .bullets li::before{
+    content:''; position:absolute; left:0; top:.6em;
+    width:10px; height:10px; background:var(--royal); transform:rotate(45deg);
+  }
+
+  @media (max-width: 640px){
+    .timeline{padding-left:40px;}
+    .timeline::before{width:14px;}
+    .timeline::after{left:5.5px;}
+    .job{padding:24px 22px 28px;}
+    .job::before{left:-40px; width:28px;}
+  }
+
+  /* ===== PROJECT ===== */
+  .sheet{
+    background:var(--white);
+    border:var(--bw) solid var(--ink);
+    border-radius:28px;
+    box-shadow:10px 10px 0 var(--ink);
+    overflow:hidden;
+  }
+  .sheet-head{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 20px;
+    padding:16px 32px;
+    background:var(--ink); color:var(--white);
+    font-family:var(--display); font-weight:500; font-size:15px;
+  }
+  .sheet-body{
+    display:grid; grid-template-columns:1.15fr .85fr; gap:36px;
+    padding:36px 32px 40px;
+  }
+  .sheet-body h3{font-weight:800; font-size:clamp(1.5rem, 2.6vw, 2rem); line-height:1.12; letter-spacing:-0.02em; margin-bottom:8px;}
+  .sheet-body .org{font-family:var(--display); font-weight:600; color:var(--royal); margin-bottom:20px;}
+  .sheet-body .bullets{margin-bottom:24px;}
+  .why{
+    background:var(--mist);
+    border:var(--bw) solid var(--ink);
+    border-radius:22px;
+    padding:24px 24px 26px;
+    align-self:start;
+  }
+  .why h4{font-weight:800; font-size:1.2rem; margin-bottom:14px;}
+  .why .bullets li{font-size:16.5px;}
+
+  .demo{
+    display:grid; grid-template-columns:.9fr 1.1fr; gap:32px; align-items:center;
+    padding:32px;
+    border-top:var(--bw) solid var(--ink);
+    background:var(--sky);
+  }
+  .demo h4{font-weight:800; font-size:1.45rem; line-height:1.15; margin-bottom:10px;}
+  .demo p.note{font-size:15.5px; margin-bottom:20px;}
+  .demo label{display:block; font-family:var(--display); font-weight:700; font-size:17px; margin-bottom:8px;}
+  .demo input[type=range]{width:100%; height:32px; accent-color:var(--royal); cursor:pointer;}
+  .demo .status{
+    margin-top:12px;
+    font-family:var(--display); font-weight:700; font-size:17px; line-height:1.35;
+    min-height:2.7em;
+  }
+  .demo svg{width:100%; height:auto; border:var(--bw) solid var(--ink); border-radius:20px; background:var(--white);}
+
+  @media (max-width: 860px){
+    .sheet-body, .demo{grid-template-columns:1fr;}
+    .sheet-head, .sheet-body, .demo{padding-left:22px; padding-right:22px;}
+  }
+
+  /* ===== EDUCATION ===== */
+  .edu-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:28px;}
+  .edu{
+    border:var(--bw) solid var(--ink);
+    border-radius:24px;
+    box-shadow:7px 7px 0 var(--ink);
+    padding:28px 28px 30px;
+  }
+  .edu--azure{background:var(--azure);}
+  .edu--sky{background:var(--sky);}
+  .edu--powder{background:var(--powder);}
+  .edu--mist{background:var(--mist);}
+  .edu .kind{
+    display:inline-block;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    padding:3px 12px; margin-bottom:14px;
+    background:var(--white); border:2px solid var(--ink); border-radius:999px;
+  }
+  .edu h3{font-weight:800; font-size:1.4rem; line-height:1.15; letter-spacing:-0.015em; margin-bottom:6px;}
+  .edu .inst{font-size:17px; margin-bottom:6px;}
+  .edu .yr{font-family:var(--display); font-weight:600; font-size:15px;}
+  .edu .note{font-family:var(--display); font-weight:500; font-size:15px; margin-top:6px;}
+
+  @media (max-width: 700px){ .edu-grid{grid-template-columns:1fr;} }
+
+  /* ===== CONTACT ===== */
+  .contact-lead{max-width:30em; font-size:20px; color:#CFE0FA; margin:-24px 0 clamp(36px, 5vw, 52px);}
+  .contact-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;}
+  .tile{
+    display:block;
+    padding:26px 28px 28px;
+    border:var(--bw) solid var(--white);
+    border-radius:22px;
+    color:var(--ink);
+    transition:transform .15s ease;
+  }
+  .tile:hover{transform:translateY(-5px);}
+  .tile--sky{background:var(--sky); border-color:var(--sky);}
+  .tile--azure{background:var(--azure); border-color:var(--azure);}
+  .tile--powder{background:var(--powder); border-color:var(--powder);}
+  .tile--royal{background:var(--royal); border-color:var(--royal); color:var(--white);}
+  .tile .k{display:block; font-family:var(--display); font-weight:500; font-size:15px; margin-bottom:4px;}
+  .tile .v{display:block; font-family:var(--display); font-weight:800; font-size:clamp(1.15rem, 2.4vw, 1.55rem); line-height:1.2; word-break:break-word;}
+  .cta-final{margin-top:48px;}
+
+  @media (max-width: 640px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink); color:#A9C0E6; border-top:1px solid rgba(255,255,255,.16); padding:26px 0; font-family:var(--display); font-size:14.5px;}
+  .foot{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;}
+  .foot .brand{font-size:16px; color:var(--white);}
+  .foot .brand-mark{width:32px; height:32px; font-size:13px; border-radius:9px;}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Chirchir Emmanuel Kiprono, back to top">
+      <span class="brand-mark">CK</span>
+      <span>Chirchir Emmanuel</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav class="links" id="navLinks" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#project">Research</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="Chirchir_Emmanuel_CV.pdf" download>Download CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1><span>Chirchir</span><span>Emmanuel</span><span>Kiprono</span></h1>
+        <p class="role">Graduate civil engineer and site engineer at EZAG Limited. From blueprint to build.</p>
+        <p class="desc">
+          Hands-on experience in structural design, construction supervision, quality control
+          and stormwater drainage assessment, built through two industrial attachments, a
+          hydraulic research project in Nyeri Town, and now site engineering at EZAG Limited.
+          Proficient in AutoCAD, MS Project and site documentation.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn--royal">Get in touch</a>
+          <a href="Chirchir_Emmanuel_CV.pdf" download class="btn">Download CV</a>
+        </div>
+        <div class="stickers">
+          <span class="sticker">2 industrial attachments</span>
+          <span class="sticker">1 hydraulic research project</span>
+          <span class="sticker">BSc Civil Engineering 2026</span>
+          <span class="sticker">CAPM certified</span>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait">
+          <div class="initials" aria-hidden="true">CK</div>
+          <img src="portrait.jpg" alt="Portrait of Chirchir Emmanuel Kiprono" onerror="this.remove()" />
+        </div>
+        <div class="avail">Site Engineer, EZAG Limited</div>
+      </div>
+    </div>
+
+    <div class="tape" aria-hidden="true">
+      <div class="track">
+        <ul>
+          <li>Structural design</li><li>Construction supervision</li><li>Site safety</li><li>Quality control</li><li>Stormwater drainage</li><li>AutoCAD</li><li>Bar bending schedules</li><li>MS Project</li><li>Spillway design</li><li>Flood risk analysis</li>
+        </ul>
+        <ul>
+          <li>Structural design</li><li>Construction supervision</li><li>Site safety</li><li>Quality control</li><li>Stormwater drainage</li><li>AutoCAD</li><li>Bar bending schedules</li><li>MS Project</li><li>Spillway design</li><li>Flood risk analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="band band--mist" id="about">
+    <div class="wrap">
+      <h2 class="h2">About</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a <strong>Civil Engineering graduate</strong> from Dedan Kimathi
+            University of Technology, grounded in structural design, construction
+            supervision and engineering documentation, gained through two industrial
+            attachments with Kenyan government engineering departments.
+          </p>
+          <p>
+            Since August 2026 I have been a <strong>Site Engineer at EZAG Limited</strong>,
+            where I am responsible for site safety and for making sure workmanship and
+            specifications are followed.
+          </p>
+          <p>
+            Before that, from January to April 2025, I was attached to the structural
+            engineering office at the <strong>State Department of Public Works</strong>.
+            There I worked on the design of a three-storey classroom block for Pangani Girls
+            High School: slab, beam, column and staircase design, plus the drawings and bar
+            bending schedules (BBS). We also made site visits to check progress.
+          </p>
+          <p>
+            My first attachment, in 2023 at the <strong>Ministry of Water</strong> on the
+            Partakilat Pan Development Project in Kilgoris, exposed me to survey work,
+            laboratory tests, earthworks and design, including the spillway design.
+          </p>
+          <p>
+            My final year research assessed <strong>stormwater drainage performance
+            in Nyeri Town</strong>, combining field survey and hydraulic analysis to
+            flag flood-prone areas and recommend improvements.
+          </p>
+        </div>
+        <div class="card-contact">
+          <div class="row"><span class="k">Location</span><span class="v">Nairobi, Kenya</span></div>
+          <div class="row"><span class="k">Email</span><a class="v" href="mailto:kipronomanuel17@gmail.com">kipronomanuel17@gmail.com</a></div>
+          <div class="row"><span class="k">Phone</span><a class="v" href="tel:+254717344357">+254 717 344 357</a></div>
+          <div class="row"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/emmanuel-kiprono-6124b3266/" target="_blank" rel="noopener">Emmanuel Kiprono</a></div>
+          <div class="row"><span class="k">Membership</span><span class="v">PMI member</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="band band--royal" id="skills">
+    <div class="wrap">
+      <h2 class="h2">Core skills</h2>
+      <div class="skills-grid">
+        <article class="skill skill--sky">
+          <span class="sym sym--circle" aria-hidden="true"></span>
+          <h3>Site and construction supervision</h3>
+          <p>Field monitoring and inspection to verify that on-site works match approved drawings and specifications.</p>
+          <div class="chips">
+            <span class="chip">Construction supervision</span>
+            <span class="chip">Site inspection</span>
+            <span class="chip">Quality assurance</span>
+            <span class="chip">Quality control</span>
+            <span class="chip">Compliance verification</span>
+            <span class="chip">Site safety</span>
+            <span class="chip">Workmanship control</span>
+          </div>
+        </article>
+        <article class="skill skill--azure">
+          <span class="sym sym--square" aria-hidden="true"></span>
+          <h3>Design and documentation</h3>
+          <p>Structural design and drawings for buildings, backed by accurate, traceable engineering records from planning to close-out.</p>
+          <div class="chips">
+            <span class="chip">Structural design</span>
+            <span class="chip">Slab, beam and column design</span>
+            <span class="chip">Staircase design</span>
+            <span class="chip">Engineering drawings</span>
+            <span class="chip">Bar bending schedules</span>
+            <span class="chip">Project coordination</span>
+            <span class="chip">Engineering documentation</span>
+            <span class="chip">Technical reporting</span>
+            <span class="chip">Project scheduling</span>
+            <span class="chip">Bills of quantities</span>
+          </div>
+        </article>
+        <article class="skill skill--powder">
+          <span class="sym sym--triangle" aria-hidden="true"></span>
+          <h3>Drainage and infrastructure</h3>
+          <p>Hydraulic assessment of urban stormwater systems, from field survey through to improvement recommendations.</p>
+          <div class="chips">
+            <span class="chip">Drainage engineering</span>
+            <span class="chip">Hydraulic assessment</span>
+            <span class="chip">Stormwater management</span>
+            <span class="chip">Flood risk analysis</span>
+            <span class="chip">Spillway design</span>
+            <span class="chip">Survey work</span>
+            <span class="chip">Earthworks</span>
+            <span class="chip">Laboratory tests</span>
+          </div>
+        </article>
+        <article class="skill skill--white">
+          <span class="sym sym--diamond" aria-hidden="true"></span>
+          <h3>Tools and software</h3>
+          <p>Comfortable across the everyday toolset for design drafting, scheduling and reporting.</p>
+          <div class="chips">
+            <span class="chip">AutoCAD</span>
+            <span class="chip">Microsoft Project</span>
+            <span class="chip">Microsoft Excel</span>
+            <span class="chip">Microsoft Word</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="band band--white" id="experience">
+    <div class="wrap">
+      <h2 class="h2">Work experience</h2>
+      <div class="timeline">
+        <article class="job">
+          <div class="meta"><span>Aug 2026 – Present</span><span class="tag tag--now">Current</span><span>Nairobi</span></div>
+          <h3>Site Engineer</h3>
+          <div class="org">EZAG Limited</div>
+          <ul class="bullets">
+            <li>Responsible for ensuring safety at site.</li>
+            <li>Ensure proper workmanship on all site works.</li>
+            <li>Ensure that works follow the project specifications.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="meta"><span>Jan 2025 – Apr 2025</span><span class="tag">Industrial attachment</span><span>Nairobi</span></div>
+          <h3>Civil Engineering Attaché</h3>
+          <div class="org">State Department of Public Works, Structural Engineering Office</div>
+          <ul class="bullets">
+            <li>Worked on the structural design of a three-storey classroom block for Pangani Girls High School.</li>
+            <li>Carried out slab design, beam design, column design and staircase design for the building.</li>
+            <li>Prepared the structural drawings and bar bending schedules (BBS).</li>
+            <li>Made site visits to check construction progress.</li>
+            <li>Reviewed engineering drawings and Bills of Quantities to support accurate project cost estimation.</li>
+            <li>Coordinated with multidisciplinary engineering teams to resolve technical issues.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="meta"><span>Apr 2023 – Jul 2023</span><span class="tag">Industrial attachment</span><span>Kilgoris, Kenya</span></div>
+          <h3>Civil Engineering Attaché</h3>
+          <div class="org">Ministry of Water, Partakilat Pan Development Project</div>
+          <ul class="bullets">
+            <li>Gained hands-on exposure to survey work, laboratory tests and earthworks on the Partakilat Pan Development Project.</li>
+            <li>Took part in the spillway design for the project.</li>
+            <li>Conducted site inspections and monitored construction progress to verify adherence to approved plans.</li>
+            <li>Performed quality assurance and quality control checks to uphold construction standards.</li>
+            <li>Prepared site reports and engineering documentation for project tracking and record-keeping.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED RESEARCH -->
+  <section class="band band--powder" id="project">
+    <div class="wrap">
+      <h2 class="h2">Featured research</h2>
+      <div class="sheet">
+        <div class="sheet-head">
+          <span>Dedan Kimathi University of Technology, Civil Engineering, 2026</span>
+          <span>Nyeri Town, Kenya</span>
+        </div>
+        <div class="sheet-body">
+          <div>
+            <h3>Assessment of the Performance of Stormwater Drainage Systems in Nyeri Town</h3>
+            <div class="org">Final year research project</div>
+            <ul class="bullets">
+              <li>Conducted hydraulic assessment of urban stormwater drainage infrastructure to evaluate system performance and capacity.</li>
+              <li>Identified drainage bottlenecks and flood-prone areas through field surveys and hydraulic analysis.</li>
+              <li>Developed engineering recommendations to improve urban stormwater management and reduce flood risk.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Hydraulic analysis</span>
+              <span class="chip">Field survey</span>
+              <span class="chip">Stormwater drainage</span>
+              <span class="chip">Flood risk assessment</span>
+            </div>
+          </div>
+          <div class="why">
+            <h4>Why it matters</h4>
+            <ul class="bullets">
+              <li>Urban drainage capacity directly determines a town's flood resilience during heavy rainfall.</li>
+              <li>Mapping bottlenecks in the field grounds recommendations in real, observed site conditions.</li>
+              <li>The findings offer a practical reference for future stormwater upgrades in Nyeri Town.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="demo">
+          <div>
+            <h4>Try it: rain on a roadside drain</h4>
+            <p class="note">Drag the slider to see how heavier rain fills a drainage channel. This is a simple sketch for illustration and does not show results from the Nyeri study.</p>
+            <label for="rain">Rainfall intensity: <output id="rainOut" for="rain">30</output> mm/hr</label>
+            <input type="range" id="rain" min="0" max="120" step="1" value="30" />
+            <p class="status" id="status" aria-live="polite"></p>
+          </div>
+          <svg viewBox="0 0 420 230" role="img" aria-label="Cross-section of a roadside drainage channel filling with water as rainfall increases">
+            <rect x="0" y="0" width="420" height="230" fill="#EEF4FF"/>
+            <g id="drops" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round">
+              <line x1="30" y1="14" x2="22" y2="34"/><line x1="78" y1="40" x2="70" y2="60"/><line x1="122" y1="12" x2="114" y2="32"/>
+              <line x1="170" y1="46" x2="162" y2="66"/><line x1="214" y1="14" x2="206" y2="34"/><line x1="262" y1="44" x2="254" y2="64"/>
+              <line x1="306" y1="12" x2="298" y2="32"/><line x1="352" y1="42" x2="344" y2="62"/><line x1="394" y1="16" x2="386" y2="36"/>
+              <line x1="52" y1="74" x2="44" y2="94"/><line x1="196" y1="76" x2="188" y2="96"/><line x1="330" y1="76" x2="322" y2="96"/>
+            </g>
+            <!-- ground (earth earth) -->
+            <rect x="0" y="110" width="420" height="120" fill="#4B6EA3"/>
+            <rect x="0" y="104" width="420" height="6" fill="#0A1F44"/>
+            <!-- channel -->
+            <polygon points="140,110 260,110 240,190 160,190" fill="#EEF4FF" stroke="#0A1F44" stroke-width="3" stroke-linejoin="round"/>
+            <polygon id="water" points="160,190 240,190 240,190 160,190" fill="#1D4ED8"/>
+            <!-- spill onto the road -->
+            <rect id="flood" x="140" y="98" width="120" height="8" rx="3" fill="#1D4ED8" opacity="0"/>
+            <polygon points="140,110 260,110 240,190 160,190" fill="none" stroke="#0A1F44" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="band band--white" id="education">
+    <div class="wrap">
+      <h2 class="h2">Education and certifications</h2>
+      <div class="edu-grid">
+        <article class="edu edu--azure">
+          <span class="kind">Degree</span>
+          <h3>BSc Civil Engineering</h3>
+          <div class="inst">Dedan Kimathi University of Technology, Kenya</div>
+          <div class="yr">2020 – 2026</div>
+          <div class="note">Second Class Honours (Lower Division)</div>
+        </article>
+        <article class="edu edu--sky">
+          <span class="kind">Certification</span>
+          <h3>Certified Associate in Project Management</h3>
+          <div class="inst">Project Management Institute</div>
+          <div class="yr">Completed Sep 1, 2026</div>
+          <div class="note">CAPM exam cleared</div>
+        </article>
+        <article class="edu edu--powder">
+          <span class="kind">Secondary</span>
+          <h3>Kenya Certificate of Secondary Education</h3>
+          <div class="inst">Moi High School Kabarak, Kenya</div>
+          <div class="yr">2016 – 2019</div>
+          <div class="note">Grade: B+</div>
+        </article>
+        <article class="edu edu--mist">
+          <span class="kind">Primary</span>
+          <h3>Kenya Certificate of Primary Education</h3>
+          <div class="inst">Line Member School, Kitale, Kenya</div>
+          <div class="yr">Completed 2015</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="band band--ink" id="contact">
+    <div class="wrap">
+      <h2 class="h2">Get in touch</h2>
+      <p class="contact-lead">Open to new site opportunities and conversations about infrastructure and drainage engineering.</p>
+      <div class="contact-grid">
+        <a class="tile tile--sky" href="mailto:kipronomanuel17@gmail.com">
+          <span class="k">Email</span>
+          <span class="v">kipronomanuel17@gmail.com</span>
+        </a>
+        <a class="tile tile--azure" href="tel:+254717344357">
+          <span class="k">Phone</span>
+          <span class="v">+254 717 344 357</span>
+        </a>
+        <a class="tile tile--powder" href="https://wa.me/254717344357" target="_blank" rel="noopener">
+          <span class="k">WhatsApp</span>
+          <span class="v">+254 717 344 357</span>
+        </a>
+        <a class="tile tile--royal" href="https://www.linkedin.com/in/emmanuel-kiprono-6124b3266/" target="_blank" rel="noopener">
+          <span class="k">LinkedIn</span>
+          <span class="v">Emmanuel Kiprono</span>
+        </a>
+      </div>
+      <div class="cta-final">
+        <a href="Chirchir_Emmanuel_CV.pdf" download class="btn btn--sky">Download full CV</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand"><span class="brand-mark">CK</span><span>Chirchir Emmanuel Kiprono</span></div>
+    <div>© 2026 Graduate Civil Engineer, Nairobi, Kenya</div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  (function(){
+    var btn = document.getElementById('menuBtn');
+    var links = document.getElementById('navLinks');
+    function setOpen(open){
+      links.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Close' : 'Menu';
+    }
+    btn.addEventListener('click', function(){ setOpen(!links.classList.contains('open')); });
+    links.addEventListener('click', function(e){ if(e.target.tagName === 'A'){ setOpen(false); } });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ setOpen(false); } });
+  })();
+
+  // Drainage demo (illustrative only)
+  (function(){
+    var rain = document.getElementById('rain');
+    if(!rain) return;
+    var out = document.getElementById('rainOut');
+    var water = document.getElementById('water');
+    var flood = document.getElementById('flood');
+    var status = document.getElementById('status');
+    var drops = Array.prototype.slice.call(document.querySelectorAll('#drops line'));
+    var CAPACITY = 60, MAX = 120;
+
+    function update(){
+      var r = Number(rain.value);
+      out.textContent = r;
+
+      var fill = Math.min(r / CAPACITY, 1);
+      var h = 80 * fill;
+      var yTop = 190 - h;
+      var dx = (h / 80) * 20;
+      water.setAttribute('points', (160 - dx) + ',' + yTop + ' ' + (240 + dx) + ',' + yTop + ' 240,190 160,190');
+
+      var over = Math.max(0, (r - CAPACITY) / (MAX - CAPACITY));
+      var ex = over * 150;
+      flood.setAttribute('x', 140 - ex);
+      flood.setAttribute('width', 120 + 2 * ex);
+      flood.setAttribute('opacity', over > 0 ? 1 : 0);
+
+      var shown = Math.ceil((r / MAX) * drops.length);
+      drops.forEach(function(d, i){ d.style.opacity = i < shown ? 1 : 0; });
+
+      if(r === 0){ status.textContent = 'No rain. The channel is empty.'; }
+      else if(r < 40){ status.textContent = 'Light to moderate rain. The channel carries it easily.'; }
+      else if(r <= CAPACITY){ status.textContent = 'Heavy rain. The channel is close to full.'; }
+      else { status.textContent = 'Past capacity. Water spills onto the road.'; }
+    }
+    rain.addEventListener('input', update);
+    update();
+  })();
+</script>
+
+</body>
+</html>
